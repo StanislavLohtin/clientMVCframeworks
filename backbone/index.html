@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityList</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="col-xs-8 col-xs-offset-2">
+    <h1 class="text-center"> City List with BackboneJS</h1>
+    <br>
+    <div class="col-xs-6 col-xs-offset-3 row well">
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Enter city name</label>
+                <input id="nameInput" class="form-control" type="text" ng-model="newCity.name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="countryInput">Enter country name</label>
+                <input id="countryInput" class="form-control" type="text" ng-model="newCity.country" placeholder="Country">
+            </div>
+            <div class="form-group">
+                <label for="populationInput">Enter city population</label>
+                <input id="populationInput" class="form-control" type="number" ng-model="newCity.population">
+            </div>
+            <div class="form-group">
+                <label for="areaInput">Enter city area</label>
+                <input id="areaInput" class="form-control" type="number" ng-model="newCity.area">
+            </div>
+            <div id="AddButtonArea"></div>
+        </form>
+    </div>
+
+    <div id="buttonArea" class="col-xs-12 well"></div>
+    <div id="tableArea"></div>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/underscore/underscore-min.js"></script>
+<script src="bower_components/backbone/backbone-min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

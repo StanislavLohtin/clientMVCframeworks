@@ -1,0 +1,20 @@
+<div class="col-xs-8 col-xs-offset-2">
+    <h1 class="text-center"> City List with EmberJS</h1>
+    <br>
+
+    <div class="col-xs-12 well">
+        <div class="col-xs-4">
+            {{#link-to 'simple'}}  <button type="submit" class="btn btn-primary center-block"> Simple GET </button> {{/link-to}}
+        </div>
+        <div class="col-xs-4">
+            {{#link-to 'medium'}} <button type="submit" class="btn btn-primary center-block"> Medium GET </button> {{/link-to}}
+        </div>
+        <div class="col-xs-4">
+            {{#link-to 'massife'}} <button type="submit" class="btn btn-primary center-block"> Massive GET </button> {{/link-to}}
+        </div>
+    </div>
+
+    {{outlet}}
+
+</div>
+

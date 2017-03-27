@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityList</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app="bachelor" ng-controller="CityListController">
+<div class="col-xs-8 col-xs-offset-2">
+    <h1 class="text-center"> City List with AngularJS</h1>
+    <br>
+    <div class="col-xs-6 col-xs-offset-3 row well">
+        <form>
+            <div class="form-group">
+                <label for="nameInput">Enter city name</label>
+                <input id="nameInput" class="form-control" type="text" ng-model="newCity.name" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="countryInput">Enter country name</label>
+                <input id="countryInput" class="form-control" type="text" ng-model="newCity.country" placeholder="Country">
+            </div>
+            <div class="form-group">
+                <label for="populationInput">Enter city population</label>
+                <input id="populationInput" class="form-control" type="number" ng-model="newCity.population">
+            </div>
+            <div class="form-group">
+                <label for="areaInput">Enter city area</label>
+                <input id="areaInput" class="form-control" type="number" ng-model="newCity.area">
+            </div>
+
+            <button type="submit" class="btn btn-success center-block" ng-click="addNewCity()">
+                <span class="glyphicon glyphicon-plus"></span> Add
+            </button>
+        </form>
+    </div>
+
+    <div class="col-xs-12 well">
+        <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary center-block" ng-click="simpleGET()"> Simple GET </button>
+        </div>
+        <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary center-block" ng-click="mediumGET()"> Medium GET </button>
+        </div>
+        <div class="col-xs-4">
+            <button type="submit" class="btn btn-primary center-block" ng-click="massiveGET()"> Massive GET </button>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th> Name </th>
+            <th> Country </th>
+            <th> Population </th>
+            <th> Area </th>
+        </tr>
+        <tr ng-repeat="city in cities">
+            <td>{{ city.name }}</td>
+            <td>{{ city.country }}</td>
+            <td>{{ city.population }}</td>
+            <td>{{ city.area }} &#13218; </td>
+        </tr>
+    </table>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+<script src="city.js"></script>
+</body>
+</html>

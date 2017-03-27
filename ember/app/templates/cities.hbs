@@ -1,0 +1,46 @@
+<div class="col-xs-6 col-xs-offset-3 row well">
+    <form>
+        <div class="form-group">
+            <label>Enter city name</label>
+            {{input type="text" class="form-control" value=name placeholder="Name"}}
+        </div>
+        <div class="form-group">
+            <label for="countryInput">Enter country name</label>
+            {{input type="text" class="form-control" value=country placeholder="Country"}}
+        </div>
+        <div class="form-group">
+            <label for="populationInput">Enter city population</label>
+            {{input type="number" class="form-control" value=population}}
+        </div>
+        <div class="form-group">
+            <label for="areaInput">Enter city area</label>
+            {{input type="number" class="form-control" value=area}}
+        </div>
+        <button type="submit" {{action 'addCity'}} class="btn btn-success center-block">
+            + Add
+        </button>
+    </form>
+</div>
+
+<table class="table table-bordered table-striped table-hover">
+    <tbody>
+    <tr>
+        <th> Name </th>
+        <th> Country </th>
+        <th> Population </th>
+        <th> Area </th>
+    </tr>
+    {{#each model as |city|}}
+        <tr>
+            <td>{{ city.name }}</td>
+            <td>{{ city.country }}</td>
+            <td>{{ city.population }}</td>
+            <td>{{ city.area }} &#13218; </td>
+        </tr>
+    {{/each}}
+
+    {{outlet}}
+    </tbody>
+</table>
+
+
